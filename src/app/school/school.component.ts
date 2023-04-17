@@ -6,5 +6,10 @@ import { Component } from "@angular/core";
 })
 
 export class SchoolComponent {
+    schoolID = 10;
+    schoolName = 'EnyCaldeira'
 
+    getSchoolName(){
+        return this.schoolName
+    }
 }
