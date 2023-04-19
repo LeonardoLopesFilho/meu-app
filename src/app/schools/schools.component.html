@@ -1,2 +1,17 @@
+
+<label for="">Nome da escola</label>
+<!-- <input type="text" class="form-control" (input)="updateSchoolName($event)"> -->
+<input type="text" class="form-control" [(ngModel)]="schoolName">
+<!-- <p>{{ schoolName }}</p> -->
+
+
+<button
+     class="btn btn-primary"
+    [disabled]="!allowNewSchool"
+    (click)="createSchool()">Incluir</button>
+
+<!-- <p>{{ aceitaaNovaEscola }}</p> -->
+
+<p>{{ createdSchoolStatus }}</p>
 <app-school></app-school>
 <app-school></app-school>
