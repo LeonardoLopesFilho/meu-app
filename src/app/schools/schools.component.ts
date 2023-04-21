@@ -8,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SchoolsComponent {
 
-  allowNewSchool = false
-  createdSchoolStatus = "Nenhuma Escola Criada"
+  allowNewSchool = false;
+  createdSchoolStatus = "Nenhuma Escola Criada";
   schoolName = "Nome de Teste da Escola";
+  schoolCreated = false;
+  schools = ['Escola 1','Escola 2'];
 
   constructor() {}
 
@@ -21,6 +23,11 @@ export class SchoolsComponent {
   }
 
   createSchool() {
+    // setTimeout(() =>{
+    //    this.schoolCreated = false
+    // },5000);
+    this.schoolCreated = true;
+    this.schools.push(this.schoolName)
     this.createdSchoolStatus = "Escola Criada com o nome de:" + this.schoolName;
   }
 
